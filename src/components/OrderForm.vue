@@ -3,14 +3,22 @@ import { ref } from 'vue';
 import DropZone from './atom/DropZone.vue';
 import FilePreview from './atom/FilePreview.vue'
 import SwitcherRound from './atom/SwitcherRound.vue';
-import useFileList from '@/compositions/file-lists'
+import useFileList, { UploadableFiles } from '@/compositions/file-lists'
 
 let titleError = ref('');
 let flavorError = ref('');
 const { files, addFiles, removeFile } = useFileList();
-const ticketList = ref([]);
+const ticketList = ref<IForm[]>([]);
 
-const formRef = ref({
+type IForm = {
+  title:       string;
+  flavor:      string;
+  price:       null;
+  description: string;
+  img:         UploadableFiles | null;
+}
+
+const formRef = ref<IForm>({
   title: '',
   flavor: '',
   price: null,
@@ -50,7 +58,7 @@ const handleFlavorError = () => {
   }
 }
 
-function onInputChange(e) {
+function onInputChange(e: any) {
 	addFiles(e.target.files)
 	e.target.value = null 
 }
@@ -58,7 +66,6 @@ function onInputChange(e) {
 const handleClearForm = () => {
   formRef.value.description = ''
   formRef.value.flavor = ''
-  formRef.value.img = null
   formRef.value.price = null
   formRef.value.title = ''
 

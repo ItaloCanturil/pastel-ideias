@@ -24,7 +24,7 @@ export default function () {
   return { files, addFiles, removeFile }
 }
 
-class UploadableFiles {
+export class UploadableFiles {
   file: File
   id: string
   url: string
