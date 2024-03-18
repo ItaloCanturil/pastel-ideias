@@ -23,7 +23,7 @@ const setInactive = () => {
   }, 50);
 }
 
-const onDrop = (e: Event) => {
+const onDrop = (e: any) => {
   emit('files-dropped', [...e.dataTransfer.files]);
 }
 
@@ -41,7 +41,7 @@ onMounted(() => {
 
 onUnmounted(() => {
   events.forEach(eventName => {
-    document.body.removeEventListever(eventName, preventDefaults)
+    document.body.removeEventListener(eventName, preventDefaults)
   });
 })
 </script>
