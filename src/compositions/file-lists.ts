@@ -1,7 +1,7 @@
 import { ref } from 'vue'
 
 export default function () {
-  const files = ref<File[]>([])
+  const files = ref<UploadableFiles[]>([])
 
   function addFiles(newFiles: any) {
     const newUploadableFiles = [...newFiles]
