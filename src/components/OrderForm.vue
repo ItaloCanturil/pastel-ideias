@@ -87,7 +87,7 @@ const sendTicket = () => {
 
 <template>
   <div class="rounded-2xl shadow-lg shadow-[#740B0B45] z-1 relative bg-white text-[#A03400]">
-    <div class="flex justify-between bg-[#FFCA00]  p-4 rounded-2xl">
+    <div class="flex justify-between bg-[#FFCA00]  p-4 rounded-2xl gap-4">
       <div class="italic bold text-xl">
         Monte aqui o seu cardápio. O que está esperando?
       </div>
