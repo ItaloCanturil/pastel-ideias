@@ -20,7 +20,7 @@ describe('OrderForm', () => {
     await titleInput.setValue('ac'.repeat(30))
     expect(wrapper.find('.error-message').exists()).toBe(false)
   }),
-    it('input validations', async () => {
+    it('input flavor validations', async () => {
       const wrapper = mount(OrderForm)
       const flavorInput = wrapper.find('#flavor')
       // Title and flavor required, min 3 max 60

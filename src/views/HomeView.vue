@@ -6,9 +6,7 @@ import OrderForm from '@/components/OrderForm.vue';
 
 <template>
   <div class="home">
-    <div class="header__background-red"></div>
     <header class="header__pasteis">
-
       <div class="pasteis">
         <div class="pasteis__left">
           <img class="pasteis__img" src="/src/assets/img/pastel-paralax.png" alt="Pastel à esquerda">
@@ -38,19 +36,6 @@ import OrderForm from '@/components/OrderForm.vue';
   justify-content: center;
 }
 
-.header__background-red {
-  background-image: url('/src/assets/img/wave.svg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
-  max-height: 74vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: -9999;
-}
-
 .header__pasteis {
   margin-bottom: 24px;
 }
@@ -74,7 +59,7 @@ import OrderForm from '@/components/OrderForm.vue';
   width: 100%;
   margin-right: auto;
   /* position: absolute; */
-  z-index: 1;
+  z-index: 2;
 }
 
 .pasteis__right {
@@ -82,12 +67,11 @@ import OrderForm from '@/components/OrderForm.vue';
   max-height: 316px;
   width: 100%;
   /* position: absolute; */
-  z-index: -1;
+  z-index: 0;
 }
 
 .pasteis__img {
   width: 100%;
   height: auto;
 }
-
 </style>
