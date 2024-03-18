@@ -3,12 +3,12 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-  <div class="degrade">
-  <div class="header__background-red">
-  </div>
-  
-  
-  <RouterView />
+  <div class="degrade min-h-screen">
+    <div class="header__background-red">
+    </div>
+    
+    
+    <RouterView />
   
   </div>
 </template>
@@ -19,7 +19,6 @@ import { RouterLink, RouterView } from 'vue-router'
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
-  max-height: 74vh;
   position: absolute;
   top: 0;
   left: 0;
@@ -31,9 +30,7 @@ import { RouterLink, RouterView } from 'vue-router'
 .degrade {
   background: rgb(255,255,255);
 background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 75%, rgba(255,255,255,0) 100%);
-  height: 100vh;
   max-width: 1280px;
   margin: 0 auto;
 }
-
 </style>

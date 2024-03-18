@@ -59,6 +59,8 @@
 }
 
 body {
+  display: flex;
+  place-items: center;
   min-height: 100vh;
   color: var(--color-text);
   background: var(--color-background);
@@ -67,11 +69,11 @@ body {
     background-color 0.5s;
   line-height: 1.6;
   font-family:
+    Roboto,
     Inter,
     -apple-system,
     BlinkMacSystemFont,
     'Segoe UI',
-    Roboto,
     Oxygen,
     Ubuntu,
     Cantarell,
